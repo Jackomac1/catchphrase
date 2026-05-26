@@ -9,14 +9,15 @@ static constexpr int PIN_BOOT   = 0;   // active-low
 static constexpr int PIN_POWER  = 16;  // active-low
 
 // --- LCD (QSPI) ---
-static constexpr int PIN_LCD_CS    = 9;
-static constexpr int PIN_LCD_SCLK  = 10;
-static constexpr int PIN_LCD_DATA0 = 11;
-static constexpr int PIN_LCD_DATA1 = 12;
-static constexpr int PIN_LCD_DATA2 = 13;
-static constexpr int PIN_LCD_DATA3 = 14;
-static constexpr int PIN_LCD_RST   = 21;
-static constexpr int PIN_LCD_BL    = 8;
+static constexpr int PIN_LCD_CS         = 9;
+static constexpr int PIN_LCD_SCLK       = 10;
+static constexpr int PIN_LCD_DATA0      = 11;
+static constexpr int PIN_LCD_DATA1      = 12;
+static constexpr int PIN_LCD_DATA2      = 13;
+static constexpr int PIN_LCD_DATA3      = 14;
+static constexpr int PIN_LCD_RST        = 21;
+static constexpr int PIN_LCD_BL         = 8;
+static constexpr int PIN_LCD_BACKLIGHT  = 8;  // alias used by axs15231b driver
 
 // --- SD card (1-bit MMC) ---
 static constexpr int PIN_SD_CLK = 41;
@@ -45,9 +46,21 @@ static constexpr int PIN_BATT_ADC = 4;
 static constexpr uint8_t TCA9554_ADDRESS = 0x20;
 static constexpr uint8_t ES8311_ADDRESS  = 0x18;
 
-// --- Display logical dimensions (after 90° rotation) ---
-static constexpr int DISPLAY_WIDTH  = 640;
-static constexpr int DISPLAY_HEIGHT = 172;
+// --- Display dimensions ---
+static constexpr int DISPLAY_WIDTH       = 640;  // logical landscape
+static constexpr int DISPLAY_HEIGHT      = 172;
+static constexpr int PANEL_NATIVE_WIDTH  = 172;  // physical portrait
+static constexpr int PANEL_NATIVE_HEIGHT = 640;
+
+// --- Display orientation ---
+static constexpr bool UI_ROTATED_180 = false;
+
+enum class UiOrientation {
+    Portrait,
+    PortraitFlipped,
+    Landscape,
+    LandscapeFlipped,
+};
 
 // --- TCA9554 bit positions ---
 static constexpr uint8_t TCA_BIT_BATT_SENSE = 0;
