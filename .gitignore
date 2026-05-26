@@ -1,0 +1,11 @@
+# PlatformIO build output
+.pio/
+.vscode/
+*.DS_Store
+
+# Flash backups (potentially large, keep local)
+backups/
+
+# IDE
+*.suo
+*.user

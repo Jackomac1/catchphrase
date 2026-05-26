@@ -1,0 +1,40 @@
+Soccer
+Basketball
+Tennis
+Golf
+Swimming
+Baseball
+American Football
+Ice Hockey
+Volleyball
+Rugby
+Skiing
+Surfing
+Cycling
+Boxing
+Gymnastics
+Marathon
+Pole Vault
+Javelin
+Archery
+Fencing
+Polo
+Curling
+Bobsled
+Water Polo
+Synchronized Swimming
+Rock Climbing
+Snowboarding
+Skateboarding
+Badminton
+Table Tennis
+Lacrosse
+Rowing
+Sailing
+Triathlon
+Weightlifting
+Judo
+Taekwondo
+Wrestling
+Hurdles
+Discus
