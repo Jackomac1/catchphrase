@@ -21,7 +21,7 @@ if [ -z "$PORT" ]; then
     exit 1
 fi
 
-echo "=== Flashing RSVP Nano to ota_1 (0x210000) ==="
+echo "=== Flashing RSVP Nano to ota_1 (0x250000) ==="
 echo "Put device in flash mode (hold BOOT, press/release RESET, release BOOT)"
 echo "Press Enter when ready..."
 read
@@ -29,8 +29,8 @@ read
 python3 -m esptool --chip esp32s3 --port "$PORT" --baud 460800 \
     write_flash \
     --flash_mode qio \
-    --flash_size 8MB \
-    0x210000 "$RSVP_BIN"
+    --flash_size 16MB \
+    0x250000 "$RSVP_BIN"
 
 echo ""
 echo "✓ RSVP Nano flashed to ota_1."

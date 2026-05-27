@@ -16,13 +16,13 @@ mkdir -p "$BACKUP_DIR"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 BACKUP_FILE="$BACKUP_DIR/rsvpnano_full_backup_$TIMESTAMP.bin"
 
-echo "Backing up full 8MB flash from $PORT → $BACKUP_FILE"
-echo "Put device in flash mode: hold BOOT button, press RESET, release RESET, release BOOT"
+echo "Backing up full 16MB flash from $PORT → $BACKUP_FILE"
+echo "Put device in flash mode: hold BOOT button, unplug USB, replug USB, release BOOT"
 echo "Press Enter when ready..."
 read
 
 python3 -m esptool --chip esp32s3 --port "$PORT" \
-    read_flash 0x0 0x800000 "$BACKUP_FILE"
+    read_flash 0x0 0x1000000 "$BACKUP_FILE"
 
 echo ""
 echo "✓ Backup saved to: $BACKUP_FILE"

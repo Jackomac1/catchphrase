@@ -24,4 +24,4 @@ echo "Extracting rsvpnano app from: $LATEST_BACKUP"
 dd if="$LATEST_BACKUP" of="$OUTPUT" bs=1 skip=$((0x10000)) count=$((0x1F0000)) 2>/dev/null
 
 echo "✓ Extracted to: $OUTPUT"
-echo "  This will be flashed to ota_1 (offset 0x210000) in step 4."
+echo "  This will be flashed to ota_1 (offset 0x250000) in step 4."

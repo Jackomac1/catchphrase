@@ -42,7 +42,7 @@ BOOTLOADER_BIN="$PROJECT_ROOT/.pio/build/waveshare_esp32s3_usb_msc/bootloader.bi
 python3 -m esptool --chip esp32s3 --port "$PORT" --baud 460800 \
     write_flash \
     --flash_mode qio \
-    --flash_size 8MB \
+    --flash_size 16MB \
     --erase-all \
     0x0000   "$BOOTLOADER_BIN" \
     0x8000   "$PARTITIONS_BIN" \
